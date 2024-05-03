@@ -1,46 +1,26 @@
+<!DOCTYPE HTML>
 <html>
-
-<head>
-
-    <title>Alex Oraha's website</title>
-
-</head>
-
-<body>
-
-     <style>
-        html {
-            font-size: 22px;
-        }
-
-        body {
-            background-color: #333;
-            color: whitesmoke;
-        }
-    </style>
-
-
-    <p>
-
-Something will be here, once ruffle stops fucking around and starts working
-        
+    <head>
+        <meta charset='utf8'>
+    </head>
+    <body>
+        <div id='ruffle'></div>
+        <script src='https://github.com/Alexio1212/alexio1212.github.io/raw/main/ruffle/ruffle.js'></script>
         <script>
-    window.RufflePlayer = window.RufflePlayer || {};
-                window.RufflePlayer.config = {
-"publicPath": undefined,
-                }
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
-        container.appendChild(player);
-        player.load("https://github.com/Alexio1212/alexio1212.github.io/raw/main/papasfreezeria.swf");
-    });
-</script>
-<script src="https://github.com/Alexio1212/alexio1212.github.io/raw/main/ruffle/ruffle.js"></script>
-        
-    </p>
+var swfobject = {};
 
-</body>
+swfobject.embedSWF = function(url, cont, width, height){
+    var ruffle = window.RufflePlayer.newest(),
+        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+            width: width,
+            height: height,
+            style: 'width: ' + width + 'px; height: ' + height + 'px',
+        });
+    
+    player.load({ url: url });
+}
 
+swfobject.embedSWF('https://github.com/Alexio1212/alexio1212.github.io/raw/main/papasfreezeria.swf', 'ruffle', 500, 500);
+        </script>
+    </body>
 </html>
