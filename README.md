@@ -5,4 +5,5 @@ In active development
 <br>
 You can copy this onto your own domain, not my code anyways <br>
 Copy "papaspizzeria", replace the .swf and .swf name in index.html <br>
-That's it, go nuts
+(Only if you wanna change the game) <br>
+Otherwise, that's it, go nuts. No name/file changing required
