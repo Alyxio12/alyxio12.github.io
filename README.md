@@ -1,2 +1,2 @@
-Flash game collection
+Flash game collection <br>
 In active development
