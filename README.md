@@ -4,4 +4,5 @@ In active development
 <br>
 <br>
 You can copy this onto your own domain, not my code anyways <br>
-Copy "papaspizzeria", replace the .swf and .swf name in index.html
+Copy "papaspizzeria", replace the .swf and .swf name in index.html <br>
+That's it, go nuts
