@@ -7,7 +7,7 @@
         <div id='ruffle'></div>
         <script src='https://github.com/Alexio1212/alexio1212.github.io/raw/main/ruffle/ruffle.js'></script>
         <script>
-var swfobject = {};
+var swfobject = {ua: {pv: {}}, hasFlashPlayerVersion() { return true }};
 
 swfobject.embedSWF = function(url, cont, width, height){
     var ruffle = window.RufflePlayer.newest(),
