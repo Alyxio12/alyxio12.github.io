@@ -25,6 +25,19 @@
 
     <p>
         www.alexoraha.com
+
+        <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("papasfreezeria.swf");
+    });
+</script>
+<script src="https://github.com/Alexio1212/alexio1212.github.io/raw/main/ruffle/ruffle.js"></script>
+        
     </p>
 
 </body>
