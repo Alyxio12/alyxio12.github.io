@@ -1,45 +1,40 @@
+<!DOCTYPE HTML>
 <html>
 
 <head>
-
-    <title>Alex Oraha's website</title>
-
-    <style>
-        html {
-            font-size: 22px;
-        }
-
-        body {
-            background-color: #333;
-            color: whitesmoke;
-        }
-    </style>
-
+    <title>BFDIA 5b - FlashGamesWeb</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-
-    <h1>
-        Hello, World
-    </h1>
-
-    <p>
-        www.alexoraha.com
-
+    <div class="main">
+        <div class="top">
+            <a href="../">home</a> |
+            <a href="../games">games</a> |
+            <a href="../about">about</a>
+        </div>
+        <div id='ruffle'></div>
+        <script src='../ruffle/ruffle.js'></script>
         <script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
-        container.appendChild(player);
-        player.load("https://github.com/Alexio1212/alexio1212.github.io/raw/main/papasfreezeria.swf");
-    });
-</script>
-<script src="path/to/ruffle/ruffle.js"></script>
-        
-    </p>
+            var swfobject = {};
 
+            swfobject.embedSWF = function (url, cont, width, height) {
+                var ruffle = window.RufflePlayer.newest(),
+                    player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+                        width: width,
+                        height: height,
+                        style: 'width: ' + width + 'px; height: ' + height + 'px',
+                    });
+
+                player.load({ url: url });
+            }
+
+            swfobject.embedSWF('https://alexio1212.github.io/papasfreezeria.swf', 'ruffle', 800, 600);
+        </script>
+        <h2>BFDIA 5b</h2>
+        <p>TBA</p>
+        <p><b>Origin:</b> Jacknjellify</p>
+    </div>
 </body>
 
 </html>
